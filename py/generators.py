@@ -8,16 +8,16 @@
 #             https://www.youtube.com/watch?v=RdhoN4VVqq8&list=LL&index=7&t=374s
 
 
-# # FUNCTIONAL PROGRAMING EXAMPLE
-# template = '{region:<{align}}   {profit:<14,.0f}'.format
-# # print(template)
-# def output(markets, write=print, template=template):
-#     align = max(map(len, markets))
-#     for region, profit in markets.items():
-#         line = template(region=region, profit=profit, align=align)
-#         write(line)
+# FUNCTIONAL PROGRAMING EXAMPLE
+template = '{region:<{align}}   {profit:<14,.0f}'.format
+# print(template)
+def output(markets, write=print, template=template):
+    align = max(map(len, markets))
+    for region, profit in markets.items():
+        line = template(region=region, profit=profit, align=align)
+        write(line)
 
-# output({region:Accounting(profit) for region, profit in markets.items()})
+output({region:Accounting(profit) for region, profit in markets.items()})
 
 #   console-output:
 # ----------------------------
